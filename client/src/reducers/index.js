@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 const groceryItemsReducer = (state = [], action) => {
     switch(action.type) {
         case 'FETCH_GROCERY_ITEMS':
-            return [...state, action.payload];
+            return action.payload;
         default:
             return state;
     }

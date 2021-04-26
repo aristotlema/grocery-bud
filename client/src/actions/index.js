@@ -4,6 +4,6 @@ export const fetchGroceryItems = () => async dispatch => {
     const res = await groceryItems.get('/');
     dispatch({ 
         type: 'FETCH_GROCERY_ITEMS', 
-        payload: res
+        payload: res.data
     });
 }
