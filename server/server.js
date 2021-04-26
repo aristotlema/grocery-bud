@@ -11,4 +11,7 @@ db.once('open', () => console.log('Connected to Database'));
 
 app.use(express.json());
 
+const groceryItemsRouter = require('./routes/groceryItems');
+app.use('/groceryItems', groceryItemsRouter);
+
 app.listen(3002, () => console.log('Server Started'));
